@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Openverse Search Bookmarklet</title>
+
+    <!-- Bootstrap and icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!-- big fan of this favicon 
+          Search by Wireform CC BY from NounProject.com
+          https://thenounproject.com/icon/search-1107493/ -->
+    <link rel="shortcut icon" type="image/png" href="cc-search.png"/>
+    
+	<!-- let the styling commence -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+ <div class="container"> 
+	<div class="jumbotron">
+	  <h1 id="sitenane" class="display-4 text-center">Openverse Search Bookmarklet</h1>
+	  <p>This site offers a browser bookmarklet that triggers an <a href="https://wordpress.org/openverse/" target="_blank">Openverse</a> search of over 500 million Creative Commons licensed images from any corner of the web you are visiting (<a href="https://search.openverse.engineering/extension" target="_blank">their nifty extension</a> appears broken). Searches can be started in two ways</p>
+	
+		<div class="row">
+   	 		<div class="col-6  text-center">
+   	 			<h3>Enter Key Words</h3> 
+   	 			<p>Upon being called, the bookmarklet opens a dialog box to enter search terms. Try it with the button below!</p>
+   	 		</div>
+	  		<div class="col-6  text-center">
+	  			<h3>Selected Text</h3>
+	  			<p>Select text in any web page, then click bookmarklet to trigger search. Try with selecting any words in the box then try the button:</p>
+	  		</div>
+	  	</div>
+	  	
+	<div class="row align-items-center">
+   	 	<div class="col-6  text-center">
+   	 		<img width="378" height="150" alt="search" src="search.jpg" id="searchimg">
+   	 		
+   	  	</div>
+   	  	
+		<div class="col-6 text-center">
+			<p id="funtext">cute orange cat dog chase squirrel running dog playing mountain sky rainbow cloud horizon long distant view ocean fish swim pool jump splash melt cheese dog joy smile eyes seeing deep water jump high peak climb sunrise breakfast table fancy restaurant street car lights tree bird song</p>
+			
+   		
+		</div>
+   	</div>
+   	
+   	<div class="row">
+		<div class="col-6  text-center">
+			<button type="button" class="btn btn-secondary btn-sm" id="keymode">Search for entered keywords</button>
+		</div>
+		<div class="col-6  text-center">
+			 <button type="button" class="btn btn-secondary btn-sm" id="selectmode">Search for selected keywords</button>
+		</div>
+	</div>
+   	
+  
+  	<div class="row" style="margin-top: 1em">
+  		<div class="col-12 text-center">
+  	
+			<p>Make it your own! Drag button to your browser bookmark bar. Click and search away...</p>
+		
+		<p><a href="javascript:(function() {s=getSelection()+'';if(!s) s=prompt('Search Openverse CC licensed Images for...',''); if (s) w=window.open('https://wordpress.org/openverse/search/image?q='+encodeURIComponent(s));})()" class="btn btn-primary btn-lg" id="marklet">Openverse Search</a></p>
+ 		</div>
+	</div>
+	
+	
+ </div>
+	
+	<div id="footer" class="container-fluid text-center">
+		<p>
+		<!-- background image attribution -->
+		<a href="https://flickr.com/photos/touho/3482613006">Revox A720 Digital FM Tuner pre-amplifier</a> flickr photo by <a href="https://flickr.com/people/touho">touhotus</a> shared under a <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons (BY) license</a> modified by Alan Levine shared also under a  <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons (BY) license</a><br />
+		</p>
+		
+		<p>
+		<!-- code credit, thanks for keeping -->
+		code by <a href="http://cog.dog/"> @cogdog</a> and <a href="https://github.com/cogdog/google-image-cc-search">available on github</a>
+		</p>
+	</div>
+</div>
+<!--  JavaScript libs 
+	   jQuery first, then Bootstrap JS, and finally Backstretch -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js" integrity="sha512-bXc1hnpHIf7iKIkKlTX4x0A0zwTiD/FjGTy7rxUERPZIkHgznXrN/2qipZuKp/M3MIcVIdjF4siFugoIc2fL0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- custom scripts for the  machine -->
+    <script>
+    // backstrech the background image -->
+    $.backstretch("openverse.jpg");
+
+	// set up the generate button
+	$(document).ready(function(){	
+	
+		$( "#keymode" ).click(function() {
+			s = prompt('Find Openverse CC Licensed Google for...','');
+			if (s) {
+				window.open('https://wordpress.org/openverse/search/image?q=' + encodeURIComponent(s), '_blank');
+				}
+		});	
+		
+		$( "#selectmode" ).click(function() {
+			// get selected text
+			let selection = document.getSelection();
+			// check if selection is in the permitted ID
+			if (selection.anchorNode.parentNode.id == 'funtext') {
+				window.open('https://wordpress.org/openverse/search/image?q='+ encodeURIComponent(selection.toString()), '_blank');
+			} else {
+				alert('For this demo, selected text must be from the box!');
+
+			}
+		});
+		
+		
+	});	
+    
+    </script>
+    
+
+</body>
+</html>
