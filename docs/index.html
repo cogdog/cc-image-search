@@ -63,7 +63,7 @@
   	
 			<p>Make it your own! Drag button to your browser bookmark bar. Click and search away...</p>
 		
-		<p><a href="javascript:(function() {s=getSelection()+'';if(!s) s=prompt(%27Search Google CC licensed Images for...%27,%27%27); if (s) w%3Dwindow.open(%27https://www.google.com/search?q=%27+encodeURIComponent(s)+%27&tbm=isch&tbs=il:cl%27,%27gicc%27);})()" class="btn btn-primary btn-lg" id="marklet">Google CC Images</a></p>
+		<p><a href="javascript:(function() {s=window.getSelection()+'';if(!s) s=prompt(%27Search Google CC licensed Images for...%27,%27%27); if (s) w%3Dwindow.open(%27https://www.google.com/search?q=%27+encodeURIComponent(s)+%27&tbm=isch&tbs=il:cl%27,%27gicc%27);})()" class="btn btn-primary btn-lg" id="marklet">Google CC Images</a></p>
  		</div>
 	</div>
 	
@@ -105,7 +105,7 @@
 		
 		$( "#selectmode" ).click(function() {
 			// get selected text
-			let selection = document.getSelection();
+			let selection = window.getSelection();
 			// check if selection is in the permitted ID
 			if (selection.anchorNode.parentNode.id == 'funtext') {
 				window.open('https://www.google.com/search?q=' + encodeURIComponent(selection.toString())+'&tbm=isch&tbs=il%3Acl', '_blank');
