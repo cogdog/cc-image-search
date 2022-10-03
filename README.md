@@ -1,6 +1,6 @@
-# Bookmarket for CC License Image Search
+# Bookmarklets for CC License Image Search
 
-Make a bookmarklet for old school cool way to search Google Images with results filtered for CC licensed images.
+Make a bookmarklet for old school  way (browser bookmarklets) to search Creative Commons licensed images from anywhere you are on the web. It will create a box to enter search terms, or if text is selected, it will run off and search for images matching those as search terms.
 
 by Alan Levine https://cog.dog or http://cogdogblog.com/
 
@@ -12,11 +12,21 @@ by Alan Levine https://cog.dog or http://cogdogblog.com/
 ----- 
 
 
-Just made, so for now, just try it. Read da blog https://cogdogblog.com/2022/01/cc-google-images-bookmarklet/
-
+## One For Google Images
 
 Try the Bookmarklet for Google CC Image Search
 http://cogdog.github.io/cc-image-search
 
-and a new one for doing Openverse image searches
+### More Than You May Want to Know
+* [A CC Only Google Images Bookmarklet By Request](https://cogdogblog.com/2022/01/cc-google-images-bookmarklet/) (Jan 2, 2022)
+* [Google Broke Image Search for Creative Commons and Hardly Anyone Noticed/Cares](https://cogdogblog.com/2022/09/google-broke-cc-image-search/) (Sep 27, 2022)
+* [Heard? Google CC Image Search Now 433% Better (and still sad)](https://cogdogblog.com/2022/10/google-cc-image-search-better-sad/) (Oct 02, 2022)
+
+
+## One For Openverse
+
+Try the Bookmarklet for [Openverse Image Search](https://wordpress.org/openverse/)
 http://cogdog.github.io/cc-image-search/openverse.html
+
+
+

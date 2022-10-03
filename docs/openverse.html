@@ -22,7 +22,7 @@
  <div class="container"> 
 	<div class="jumbotron">
 	  <h1 id="sitenane" class="display-4 text-center">Openverse Search Bookmarklet</h1>
-	  <p>This site offers a browser bookmarklet that triggers an <a href="https://search.openverse.engineering/" target="_blank">Openverse</a> search of over 500 million Creative Commons licensed images from any corner of the web you are visiting (<a href="https://search.openverse.engineering/extension" target="_blank">their nifty extension</a> appears broken). Searches can be started in two ways</p>
+	  <p>This site offers a browser bookmarklet that triggers an <a href="https://wordpress.org/openverse/" target="_blank">Openverse</a> search of over 600 million Creative Commons licensed images from any corner of the web. Searches can be started in two ways</p>
 	
 		<div class="row">
    	 		<div class="col-6  text-center">
@@ -63,7 +63,7 @@
   	
 			<p>Make it your own! Drag button to your browser bookmark bar. Click and search away...</p>
 		
-		<p><a href="javascript:(function() {s=window.getSelection()+'';if(!s) s=prompt('Search Openverse CC licensed Images for...',''); if (s) w=window.open('https://search.openverse.engineering/search/image?q='+encodeURIComponent(s));})()" class="btn btn-primary btn-lg" id="marklet">Openverse Search</a></p>
+		<p><a href="javascript:(function() {s=window.getSelection()+'';if(!s) s=prompt('Search Openverse CC licensed Images for...',''); if (s) w=window.open('https://wordpress.org/openverse/search/image?q='+encodeURIComponent(s));})()" class="btn btn-primary btn-lg" id="marklet">Openverse Search</a></p>
  		</div>
 	</div>
 	
@@ -99,7 +99,7 @@
 		$( "#keymode" ).click(function() {
 			s = prompt('Find Openverse CC Licensed Google for...','');
 			if (s) {
-				window.open('https://search.openverse.engineering/search/image?q=' + encodeURIComponent(s), '_blank');
+				window.open('https://wordpress.org/openverse/search/image?q=' + encodeURIComponent(s), '_blank');
 				}
 		});	
 		
@@ -108,7 +108,7 @@
 			let selection = window.getSelection();
 			// check if selection is in the permitted ID
 			if (selection.anchorNode.parentNode.id == 'funtext') {
-				window.open('https://search.openverse.engineering/search/image?q='+ encodeURIComponent(selection.toString()), '_blank');
+				window.open('https://wordpress.org/openverse/search/image?q='+ encodeURIComponent(selection.toString()), '_blank');
 			} else {
 				alert('For this demo, selected text must be from the box!');
 
@@ -119,7 +119,5 @@
 	});	
     
     </script>
-    
-
 </body>
 </html>
