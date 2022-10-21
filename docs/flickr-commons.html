@@ -27,22 +27,21 @@
 		<div class="row">
    	 		<div class="col-6  text-center">
    	 			<h3>Enter Key Words</h3> 
-   	 			<p>Upon being called, the bookmarklet opens a dialog box to enter search terms. Try it with the button below!</p>
+   	 			<p>Upon being called, the bookmarklet opens a dialog box to enter search terms. See the same effect with the button below!</p>
    	 		</div>
 	  		<div class="col-6  text-center">
-	  			<h3>Selected Text</h3>
-	  			<p>Select text in any web page, then click bookmarklet to trigger search. Try with selecting any words in the box then try the button:</p>
+	  			<h3>Select Text</h3>
+	  			<p>With the bookmarklet, select text in any web page, then click bookmarklet to trigger search. Try below   selecting any words in the box then click the button:</p>
 	  		</div>
 	  	</div>
 	  	
 	<div class="row align-items-center">
    	 	<div class="col-6  text-center">
-   	 		<img width="378" height="150" alt="flickr commons search" src="flickr-commons-search.jpg" id="searchimg">
-   	 		
+   	 		<img width="378" height="150" alt="flickr commons search" src="flickr-commons-search.jpg" id="searchimg"> 	 		
    	  	</div>
    	  	
 		<div class="col-6 text-center">
-			<p id="funtext">ship library nasa japan olympus new york bain news band opera war officers pietown castle navy lunch wagon baseball usher auxiliary promenade cigar factory nurse field bridge derby scotland hotel garden store farmer cornwall pyramid radio control horse carriage hospotal</p>
+			<p id="funtext">ship library nasa japan olympus new york bain news band opera war officers pietown castle navy lunch wagon baseball usher auxiliary promenade cigar factory nurse field bridge general derby scotland hotel garden store farmer cornwall pyramid rodeo radio mayor control horse carriage hospital</p>
 			
    		
 		</div>
@@ -102,6 +101,10 @@
 				window.open('https://www.flickr.com/search/?w=commons&q=' + encodeURIComponent(s), '_blank');
 				}
 		});	
+		
+		$( "#searchimg" ).click(function() {
+			$( "#keymode" ).click();
+		});
 		
 		$( "#selectmode" ).click(function() {
 			// get selected text
