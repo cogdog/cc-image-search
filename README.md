@@ -26,7 +26,7 @@ http://cogdog.github.io/cc-image-search
 
 ## One For Openverse
 
-Try the Bookmarklet for [Openverse Image Search](https://wordpress.org/openverse/)
+Try the Bookmarklet for [Openverse Image Search](https://openverse.org/)
 http://cogdog.github.io/cc-image-search/openverse.html
 
 ### From the blog...
